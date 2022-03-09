@@ -6,32 +6,41 @@
 #### 软件架构
 软件架构说明
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+npm i 安装所需模块
+node app.js 运行
 
 
-#### 特技
+*  http://127.0.0.1:3000
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+ - http://127.0.0.1:3000/uploads    // 托管静态资源文件
+
+ - http://127.0.0.1:3000/api 
+ --- // 1.登录、注册、注销的路由   
+ --- post http://127.0.0.1:3000/api/register // 注册的路由
+ --- post http://127.0.0.1:3000/api/login    // 登录的路由
+ --- post http://127.0.0.1:3000/api/destroy  // 注销的路由
+ --- // 2.文章分类的路由
+ --- get http://127.0.0.1:3000/api/cates    // 获取所有文章分类
+ --- get http://127.0.0.1:3000/api/cate/:id // 根据id获取文章分类
+ --- get http://127.0.0.1:3000/api/cate/:id/articles    // 根据id获取文章分类的所有文章
+ --- post http://127.0.0.1:3000/api/addcate  // 添加文章分类
+ --- get http://127.0.0.1:3000/api/updatecate   // 更新文章分类
+ --- get http://127.0.0.1:3000/api/delcate/:id  // 删除文章分类
+ --- // 3.文章的路由
+ --- get http://127.0.0.1:3000/api/all  // 获取所有文章
+ --- // 4.友链的路由
+ --- http://127.0.0.1:3000/api/links    // 获取所有要展示的友链
+ --- http://127.0.0.1:3000/api/togglelink/:id   // 根据id指定友链是否展示
+
+ - http://127.0.0.1:3000/user   // 个人中心
+ --- get http://127.0.0.1:3000/user/userinfo    // 获取用户个人信息
+ --- post http://127.0.0.1:3000/user/userinfo    // 更新用户个人基本信息
+ --- post http://127.0.0.1:3000/user/updatepwd   // 更新密码
+ --- post http://127.0.0.1:3000/user/update/avatar   // 更新头像 
+ --- post http://127.0.0.1:3000/user/addart  // 上传文章
+...未更新，具体见 api.js 与 user.js
+...未更新，具体见 api.js 与 user.js
+...未更新，具体见 api.js 与 user.js
